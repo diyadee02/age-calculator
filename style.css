@@ -1,12 +1,11 @@
 /* General Styles */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #4f8cff 0%, #a259c6 60%, #ffb86b 100%);
-  /* More vibrant, less transparent */
-  color: #222;
+  background: linear-gradient(135deg, #ffb6c1 0%, #f7c1e3 40%, #c1b3f7 100%);
+  color: #6d3576;
   transition: background 0.3s, color 0.3s;
 }
 
@@ -25,17 +24,30 @@ body {
 
 h1 {
   margin-bottom: 0.5rem;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  color: #4f8cff;
+  color: #d72660;
   letter-spacing: 1px;
+  font-family: 'Pacifico', cursive, 'Quicksand', Arial, sans-serif;
 }
 
 .subtitle {
-  margin-top: 0.5rem;
   font-size: 1.1rem;
-  color: #666;
-  font-weight: 500;
+  color: #a259c6;
+  margin-bottom: 0.5rem;
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+.container {
+  background: linear-gradient(135deg, #fff 80%, #ffe0f0 100%);
+  padding: 2rem 2.5rem;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(255,182,193,0.18);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 2px solid #f7c1e3;
 }
 
 label {
@@ -43,54 +55,45 @@ label {
   margin-bottom: 0.7rem;
   font-weight: 600;
   font-size: 1.05rem;
-  color: #4f8cff;
+  color: #d72660;
   letter-spacing: 0.5px;
 }
 
 input[type="date"] {
   width: 100%;
   padding: 0.8rem;
-  border: 2px solid #a259c6;
-  border-radius: 10px;
+  border: 2px solid #f7c1e3;
+  border-radius: 12px;
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  background: rgba(247,247,250,0.98);
-  /* ...existing code... */
+  background: #fff0fa;
+  color: #6d3576;
+  transition: border-color 0.3s;
 }
 
 input[type="date"]:focus {
-  border-color: #4f8cff;
+  border-color: #d72660;
   outline: none;
 }
 
 button {
-  background: linear-gradient(90deg, #4f8cff 60%, #a259c6 100%);
+  background: linear-gradient(90deg, #d72660 60%, #a259c6 100%);
   color: #fff;
   border: none;
   padding: 0.85rem 2rem;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1.08rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(80,80,80,0.16);
+  box-shadow: 0 2px 8px rgba(255,182,193,0.16);
   transition: background 0.3s, box-shadow 0.3s;
+  font-family: 'Quicksand', Arial, sans-serif;
 }
 
 button:hover {
-  background: linear-gradient(90deg, #3a6fd8 60%, #ffb86b 100%);
-  box-shadow: 0 4px 16px rgba(80,80,80,0.22);
-}
-
-.container {
-  background: linear-gradient(135deg, rgba(255,255,255,0.98) 80%, rgba(255,184,107,0.13) 100%);
-  /* Less transparent, more solid white with a hint of accent */
-  padding: 2rem 2.5rem;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(80,80,80,0.18);
-  text-align: center;
-  max-width: 400px;
-  width: 100%;
-  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #f7c1e3 60%, #d72660 100%);
+  box-shadow: 0 4px 16px rgba(255,182,193,0.22);
+  color: #d72660;
 }
 
 .result {
@@ -98,85 +101,93 @@ button:hover {
   font-size: 1.18rem;
   font-weight: 500;
   color: #a259c6;
-  background: rgba(247,247,250,0.98);
-  /* ...existing code... */
-  box-shadow: 0 1px 4px rgba(80,80,80,0.12);
+  background: #fff0fa;
+  border-radius: 10px;
+  padding: 0.7rem 0;
+  box-shadow: 0 1px 4px rgba(255,182,193,0.12);
+  border: 1px solid #f7c1e3;
 }
 
 .dark-mode-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: #23243a;
+  background: #d72660;
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(80,80,80,0.10);
+  box-shadow: 0 2px 8px rgba(255,182,193,0.10);
   transition: background 0.3s;
   z-index: 10;
+  font-family: 'Quicksand', Arial, sans-serif;
 }
 
 .dark-mode-toggle:hover {
-  background: #3a2c4f;
+  background: #a259c6;
 }
 
 /* Dark Mode */
 body.dark-mode {
-  background: linear-gradient(135deg, #23243a 0%, #3a2c4f 60%, #ffb86b 100%);
-  /* ...existing code... */
+  background: linear-gradient(135deg, #6d3576 0%, #a259c6 60%, #ffb6c1 100%);
+  color: #fff;
 }
 
 body.dark-mode .container {
-  background: linear-gradient(135deg, rgba(35,36,58,0.98) 80%, rgba(255,184,107,0.13) 100%);
-  box-shadow: 0 8px 32px rgba(30,30,30,0.32);
+  background: linear-gradient(135deg, #6d3576 80%, #a259c6 100%);
+  box-shadow: 0 8px 32px rgba(162,89,198,0.32);
+  border: 2px solid #d72660;
 }
 
 body.dark-mode h1 {
-  color: #a259c6;
+  color: #ffb6c1;
 }
 
 body.dark-mode label {
-  color: #a259c6;
+  color: #ffb6c1;
 }
 
 body.dark-mode input[type="date"] {
-  border-color: #4f8cff;
-  background: rgba(44,46,74,0.98);
-  color: #eee;
+  border-color: #d72660;
+  background: #a259c6;
+  color: #fff;
 }
 
 body.dark-mode input[type="date"]:focus {
-  border-color: #a259c6;
+  border-color: #ffb6c1;
 }
 
 body.dark-mode button {
-  background: linear-gradient(90deg, #a259c6 60%, #4f8cff 100%);
+  background: linear-gradient(90deg, #ffb6c1 60%, #d72660 100%);
+  color: #d72660;
 }
 
 body.dark-mode button:hover {
-  background: linear-gradient(90deg, #7d3fa6 60%, #ffb86b 100%);
+  background: linear-gradient(90deg, #a259c6 60%, #ffb6c1 100%);
+  color: #fff;
 }
 
 body.dark-mode .result {
-  color: #4f8cff;
-  background: rgba(35,36,58,0.98);
+  color: #ffb6c1;
+  background: #a259c6;
+  border: 1px solid #d72660;
 }
 
 body.dark-mode .subtitle {
-  color: #bbb;
+  color: #ffb6c1;
 }
 
 .footer {
   text-align: center;
   font-size: 0.95rem;
-  color: #888;
+  color: #a259c6;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  font-family: 'Quicksand', Arial, sans-serif;
 }
 
 body.dark-mode .footer {
-  color: #aaa;
+  color: #ffb6c1;
 }
