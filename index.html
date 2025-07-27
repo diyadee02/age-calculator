@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+  <div class="wrapper">
+    <!-- Header Section without Logo -->
+    <div class="header">
+      <h1>Age Calculator</h1>
+      <p class="subtitle">Find out your exact age in years, months, and days!</p>
+    </div>
+
+    <!-- Age Calculator Container -->
+    <div class="container">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" max="">
+      <button onclick="calculateAge()">Calculate</button>
+      <div class="result" id="result"></div>
+    </div>
+
+    <footer class="footer">
+      &copy; 2025 Age Calculator. All rights reserved.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

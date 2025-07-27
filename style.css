@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f8cff 0%, #a259c6 60%, #ffb86b 100%);
+  /* More vibrant, less transparent */
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4f8cff;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #4f8cff;
+  letter-spacing: 0.5px;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #a259c6;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  background: rgba(247,247,250,0.98);
+  /* ...existing code... */
+}
+
+input[type="date"]:focus {
+  border-color: #4f8cff;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(90deg, #4f8cff 60%, #a259c6 100%);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(80,80,80,0.16);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #3a6fd8 60%, #ffb86b 100%);
+  box-shadow: 0 4px 16px rgba(80,80,80,0.22);
+}
+
+.container {
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 80%, rgba(255,184,107,0.13) 100%);
+  /* Less transparent, more solid white with a hint of accent */
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(80,80,80,0.18);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.result {
+  margin-top: 1.5rem;
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: #a259c6;
+  background: rgba(247,247,250,0.98);
+  /* ...existing code... */
+  box-shadow: 0 1px 4px rgba(80,80,80,0.12);
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #23243a;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(80,80,80,0.10);
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.dark-mode-toggle:hover {
+  background: #3a2c4f;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: linear-gradient(135deg, #23243a 0%, #3a2c4f 60%, #ffb86b 100%);
+  /* ...existing code... */
+}
+
+body.dark-mode .container {
+  background: linear-gradient(135deg, rgba(35,36,58,0.98) 80%, rgba(255,184,107,0.13) 100%);
+  box-shadow: 0 8px 32px rgba(30,30,30,0.32);
+}
+
+body.dark-mode h1 {
+  color: #a259c6;
+}
+
+body.dark-mode label {
+  color: #a259c6;
+}
+
+body.dark-mode input[type="date"] {
+  border-color: #4f8cff;
+  background: rgba(44,46,74,0.98);
+  color: #eee;
+}
+
+body.dark-mode input[type="date"]:focus {
+  border-color: #a259c6;
+}
+
+body.dark-mode button {
+  background: linear-gradient(90deg, #a259c6 60%, #4f8cff 100%);
+}
+
+body.dark-mode button:hover {
+  background: linear-gradient(90deg, #7d3fa6 60%, #ffb86b 100%);
+}
+
+body.dark-mode .result {
+  color: #4f8cff;
+  background: rgba(35,36,58,0.98);
+}
+
+body.dark-mode .subtitle {
+  color: #bbb;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+body.dark-mode .footer {
+  color: #aaa;
+}
